@@ -27,9 +27,9 @@ dishRouter
     Dishes.create(req.body)
         .then(
             (dish) => {
-                console.log("dish created", dish);
+                console.log("Dish Created ", dish);
                 res.statusCode = 200;
-                res.setHeader("Connection-Type", "application/json");
+                res.setHeader("Content-Type", "application/json");
                 res.json(dish);
             },
             (err) => next(err)
