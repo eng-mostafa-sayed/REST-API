@@ -17,11 +17,11 @@ const commentSchema = new Schema({
 
 const dishSchema = new Schema({
         name: { type: String, required: true, unique: true },
-        description: { type: String, required: true, unique: false },
+        description: { type: String, required: true },
         image: { type: String, required: true },
         price: { type: Currency, required: true, min: 0 },
         category: { type: String, required: true },
-        label: { type: String, default: "", required: true },
+        label: { type: String, default: "" },
         featured: { type: Boolean, default: false },
 
         //each documment in dishes has one or many comment (array of comments)
